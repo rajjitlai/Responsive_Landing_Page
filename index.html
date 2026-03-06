@@ -2,43 +2,302 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Landing Page - Responsive</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A beautiful, responsive landing page built with modern web design aesthetics — glassmorphism, smooth animations, and a premium feel." />
+  <meta property="og:title" content="Lumina – Build Something Beautiful" />
+  <meta property="og:description"
+    content="The modern platform to design, build, and ship stunning digital experiences." />
+  <meta property="og:type" content="website" />
+  <title>Lumina – Build Something Beautiful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <div class="webContainer">
-        <div class="blur itemA"></div>
-        <div class="blur itemB"></div>
-        <div class="blur itemC"></div>
-        <div class="blur itemD"></div>
-        <div class="blur itemE"></div>
-        <div class="blur itemF"></div>
 
-        <div class="webMainContainer">
-            <nav>
-                <a href="/">
-                    <img src="/images/logo.svg" alt="logo">
-                </a>
-                <div class="">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Services</a></li>
-                        <li><a href="/">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <!-- Background Blur Blobs -->
+  <div class="blob-container" aria-hidden="true">
+    <div class="blur itemA"></div>
+    <div class="blur itemB"></div>
+    <div class="blur itemC"></div>
+    <div class="blur itemD"></div>
+    <div class="blur itemE"></div>
+    <div class="blur itemF"></div>
+  </div>
 
-            <div class="mainContainer">
-                
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="/" class="nav-logo" aria-label="Lumina Home">
+      <img src="/images/logo.svg" alt="Lumina logo" class="logo-img" />
+      <span class="logo-text">Lumina</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost">Log in</a>
+      <a href="#" class="btn btn-primary">Get Started</a>
     </div>
-    
-    <script src="js/index.js"></script>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#features" class="mobile-link">Features</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="#" class="btn btn-ghost">Log in</a>
+      <a href="#" class="btn btn-primary">Get Started →</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content reveal">
+        <span class="hero-badge"><i class="fa-solid fa-wand-sparkles"></i> Now in Public Beta</span>
+        <h1 class="hero-title">
+          Build Something<br />
+          <span class="gradient-text">Truly Beautiful</span>
+        </h1>
+        <p class="hero-subtitle">
+          The modern platform to design, build, and ship stunning digital
+          experiences — faster than ever, with zero compromise on quality.
+        </p>
+        <div class="hero-cta">
+          <a href="#features" class="btn btn-primary btn-large">Get Started Free</a>
+          <a href="#about" class="btn btn-outline btn-large">
+            <span class="play-icon"><i class="fa-solid fa-play"></i></span> See How It Works
+          </a>
+        </div>
+        <p class="hero-note">No credit card required · Free forever plan</p>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card-main glass-card">
+          <div class="card-top-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="code-block">
+            <p><span class="code-keyword">const</span> <span class="code-var">lumina</span> = <span
+                class="code-fn">create</span><span class="code-paren">(</span><span
+                class="code-str">'experience'</span><span class="code-paren">)</span>;</p>
+            <p><span class="code-var">lumina</span>.<span class="code-fn">design</span><span
+                class="code-paren">()</span>.<span class="code-fn">build</span><span class="code-paren">()</span>.<span
+                class="code-fn">ship</span><span class="code-paren">()</span>;</p>
+            <p><span class="code-comment">// ✓ Beautiful in minutes</span></p>
+          </div>
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-num">10x</span>
+              <span class="stat-label">Faster</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">99%</span>
+              <span class="stat-label">Uptime</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">50k+</span>
+              <span class="stat-label">Users</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-pill pill-1 glass-card"><i class="fa-solid fa-rocket"></i> Deployed in 3s</div>
+        <div class="hero-pill pill-2 glass-card"><i class="fa-solid fa-bolt"></i> 100/100 Performance</div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="section-header reveal">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything you need<br /><span class="gradient-text">to ship faster</span></h2>
+        <p class="section-subtitle">Powerful tools designed to streamline your workflow and elevate your output.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon" style="--icon-color: #6c63ff;"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="feature-title">Blazing Fast</h3>
+          <p class="feature-desc">Optimized from the ground up for performance. Sub-second load times, intelligent
+            caching, and edge-deployed infrastructure.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <div class="feature-card glass-card reveal" style="--delay: 0.15s">
+          <div class="feature-icon" style="--icon-color: #00fdea;"><i class="fa-solid fa-palette"></i></div>
+          <h3 class="feature-title">Pixel-Perfect Design</h3>
+          <p class="feature-desc">A comprehensive design system with beautiful defaults. Every component is crafted to
+            look stunning right out of the box.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <div class="feature-card glass-card reveal" style="--delay: 0.3s">
+          <div class="feature-icon" style="--icon-color: #f57aab;"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3 class="feature-title">Fully Responsive</h3>
+          <p class="feature-desc">Looks incredible on any device. Mobile-first design with adaptive layouts that reflow
+            intelligently across all screen sizes.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <div class="feature-card glass-card reveal" style="--delay: 0.1s">
+          <div class="feature-icon" style="--icon-color: #38ff42;"><i class="fa-solid fa-lock"></i></div>
+          <h3 class="feature-title">Secure by Default</h3>
+          <p class="feature-desc">Enterprise-grade security baked in. SSL, DDOS protection, and end-to-end encryption
+            with zero configuration needed.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <div class="feature-card glass-card reveal" style="--delay: 0.25s">
+          <div class="feature-icon" style="--icon-color: #ffd700;"><i class="fa-solid fa-link"></i></div>
+          <h3 class="feature-title">Seamless Integrations</h3>
+          <p class="feature-desc">Connect with 100+ tools out of the box. From analytics to payments, everything works
+            together seamlessly.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+
+        <div class="feature-card glass-card reveal" style="--delay: 0.4s">
+          <div class="feature-icon" style="--icon-color: #ff6b6b;"><i class="fa-solid fa-chart-bar"></i></div>
+          <h3 class="feature-title">Real-time Analytics</h3>
+          <p class="feature-desc">Deep insights into your audience. Track, measure, and optimize every interaction with
+            real-time data dashboards.</p>
+          <a href="#" class="feature-link">Learn more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-text reveal">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Built for creators,<br /><span class="gradient-text">by creators</span></h2>
+        <p class="about-desc">We understand that your time is your most valuable resource. That's why Lumina is
+          engineered to eliminate friction at every step — from blank canvas to live product in minutes, not months.</p>
+        <ul class="about-checklist">
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> No-code and code-first workflows</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Instant previews with hot reload</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> One-click deployment globally</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Collaborative team features</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Learn Our Story →</a>
+      </div>
+
+      <div class="about-visual reveal">
+        <div class="about-card glass-card">
+          <div class="about-avatar-row">
+            <div class="avatar av1">AK</div>
+            <div class="avatar av2">MJ</div>
+            <div class="avatar av3">SR</div>
+            <div class="avatar av4">+2k</div>
+          </div>
+          <p class="about-quote">"Lumina cut our development time by 10x. We shipped a full product in a weekend."</p>
+          <div class="about-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="about-author">— Alex Kim, CTO at Vercel-scale startup</p>
+        </div>
+
+        <div class="orbit-ring" aria-hidden="true">
+          <div class="orbit-dot dot-orbit-1"><i class="fa-solid fa-bolt"></i></div>
+          <div class="orbit-dot dot-orbit-2"><i class="fa-solid fa-palette"></i></div>
+          <div class="orbit-dot dot-orbit-3"><i class="fa-solid fa-rocket"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section id="contact" class="cta-section reveal">
+      <div class="cta-inner glass-card">
+        <h2 class="cta-title">Ready to build<br /><span class="gradient-text">something amazing?</span></h2>
+        <p class="cta-subtitle">Join 50,000+ creators already using Lumina. Start for free, upgrade when you're ready.
+        </p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-large">Start Building Free</a>
+          <a href="#" class="btn btn-ghost btn-large">Talk to Sales</a>
+        </div>
+        <p class="cta-note"><i class="fa-solid fa-check"></i> Free plan forever &nbsp;·&nbsp; <i
+            class="fa-solid fa-check"></i> No credit card &nbsp;·&nbsp; <i class="fa-solid fa-check"></i> Cancel anytime
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" aria-label="Lumina Home">
+          <img src="/images/logo.svg" alt="Lumina logo" class="logo-img" />
+          <span class="logo-text">Lumina</span>
+        </a>
+        <p class="footer-tagline">Build something beautiful.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Roadmap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Lumina. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>

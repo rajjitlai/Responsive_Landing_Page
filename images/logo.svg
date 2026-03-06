@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="24" viewBox="0 0 72 24">
-  <path fill="#000" d="M2 12L8.24 9.74L9.27 3.11L14.14 7.47L20.39 6.47L17.77 12L20.39 17.53L14.14 16.53L9.27 20.89L8.24 14.26L2 12z"></path>
-  <path fill="#000" d="M26 12L32.24 9.74L33.27 3.11L38.14 7.47L44.39 6.47L41.77 12L44.39 17.53L38.14 16.53L33.27 20.89L32.24 14.26L26 12z" transform="translate(20, -4)"></path>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00fdea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <polygon points="16,2 29,9 29,23 16,30 3,23 3,9" fill="url(#grad)" />
+  <polygon points="16,8 23,12 23,20 16,24 9,20 9,12" fill="rgba(255,255,255,0.25)" />
+  <circle cx="16" cy="16" r="4" fill="#fff" />
 </svg>
